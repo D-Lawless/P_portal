@@ -3,6 +3,12 @@
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
+  <%= @event.brief %>
+  <%= @event.location %>
+  <%= @event.collaborators %>
+  <%= @event.event_start %>
+  <%= @event.event_end %>
+
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
