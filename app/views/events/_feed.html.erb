@@ -30,7 +30,7 @@
             <small><%= event.user.email %></small><br/>
             <p><%= event.title %></p>
           </div>
-          <%# if user_signed_in? && current_user.id == event.user_id %>
+          <% if user_signed_in? && current_user.id == event.user_id %>
             <nav class="level">
               <div class="level-left is-mobile">
                 <%= link_to event, class: "level-item" do %>
@@ -44,7 +44,7 @@
                 <% end %>
               </div>
             </nav>
-          <%# end %>
+          <% end %>
         </div>
       </article>
     </div>
