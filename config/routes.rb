@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
   devise_for :users, :controllers => { registrations: 'registrations' }
+  match '/users/:id',     to: 'users#show',       via: 'get'
+  resources :users, :only =>[:show]
   resources :events
   root "events#index"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end
