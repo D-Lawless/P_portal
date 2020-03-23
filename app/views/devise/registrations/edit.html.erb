@@ -3,27 +3,41 @@
     <div class="columns is-centered">
       <div class="column is-4">
 
-        <h2 class="title is-2">Edit <%= resource_name.to_s.humanize %></h2>
+        <h2 class="title is-2">Edit Profile</h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= f.error_notification %>
 
-          <div class="field">
-            <div class="control">
-              <%= f.input :f_name, required: true, autofocus: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+          <div class="field-group">
+            <div class="field is-inline-block-desktop">
+              <div class="control">
+                <%= f.input :f_name, required: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+              </div>
+            </div>
+
+            <div class="field is-inline-block-desktop">
+              <div class="control">
+                <%= f.input :l_name, required: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+              </div>
             </div>
           </div>
 
           <div class="field">
             <div class="control">
-              <%= f.input :l_name, required: true, autofocus: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              <%= f.text_area :about, required: true, input_html: { class: "textarea"}, wrapper: false, label_html: { class: "label" }%>
             </div>
           </div>
 
+<!--          <div class="field">-->
+<!--            <label class="label" for="the_message">About Me</label>-->
+<!--            <textarea name="message" id="the_message" class="textarea"></textarea>-->
+<!--          </div>-->
+
           <div class="field">
             <div class="control">
-              <%= f.input :username, required: true,  input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              <%= f.input :role, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
             </div>
           </div>
+
 
           <div class="field">
             <div class="control">

@@ -12,8 +12,9 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong><%= current_user.f_name %></strong><br />
-              <small><%= current_user.username %></small>
+              <strong><%= current_user.f_name %></strong> <strong><%= current_user.l_name %></strong><br />
+              <small><%= link_to '@' + current_user.username, user_path(current_user.username) %> </small><br />
+              <small><%= current_user.role %></small><br />
             </p>
           </div>
         </div>
@@ -23,20 +24,14 @@
       <div class="level is-mobile">
         <div class="level-item has-centered-text">
           <div>
-            <p class="heading">Tweeets</p>
+            <p class="heading">Collaborations</p>
             <p class="title is-6"><%= current_user.events.count %></p>
           </div>
         </div>
         <div class="level-item has-centered-text">
           <div>
-            <p class="heading">Following</p>
-            <p class="title is-6">123</p>
-          </div>
-        </div>
-        <div class="level-item has-centered-text">
-          <div>
-            <p class="heading">Followers</p>
-            <p class="title is-6">465K</p>
+            <p class="heading">Connections</p>
+            <p class="title is-6">4</p>
           </div>
         </div>
       </div>
